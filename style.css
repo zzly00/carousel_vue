@@ -257,16 +257,6 @@ body{
   animation: background-left-in 5.5s ease-out;
 }
 
-/* .bgImgRight-fade-leave{
-  opacity: 1;
-}
-.bgImgRight-fade-leave-to{
-  opacity: 0;
-}
-.bgImgRight-fade-leave-active{
-  transition: all 10s ease-out;
-} */
-
 .logoRight-fade-enter{
   opacity: 0;
   -webkit-transform: translateX(20px);
