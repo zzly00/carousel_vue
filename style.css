@@ -13,14 +13,14 @@ body{
   background-color: #000;
   position: relative;
 }
-.carousel-indicators{
+.carousel_indicators{
   margin: 0 auto;
   padding: 0;
   position: relative;
   top: -25px;
   text-align: center;
 }
-.carousel-indicators > li{
+.carousel_indicators > li{
   padding-top: 10px;
   padding-right: 2.5px;
   padding-left: 2.5px;
@@ -30,40 +30,40 @@ body{
   box-sizing: border-box;
   cursor: pointer;
 }
-.carousel-indicators > li:hover .carousel-index-border{
+.carousel_indicators > li:hover .carousel_index_border{
   background-color: rgba(255, 255, 255, 0.6);
 }
-.carousel-indicators > li:hover .carousel-index-border.border-active{
+.carousel_indicators > li:hover .carousel_index_border.border_active{
   background-color: #0e86ca;
 }
-.carousel-index-border{
+.carousel_index_border{
   width: 100%;
   height: 6px;
   background-color: rgba(255,255,255,.3);
 }
-.border-active{
+.border_active{
   background-color: #0e86ca;
 }
-.loading-bar{
+.loading_bar{
   width: 100%;
   height: 6px;
   background: #00aeff;
-  animation: border-loading 6s;
+  animation: border_loading 6s;
 }
-.carousel-item{
+.carousel_item{
   overflow: hidden;
   position: relative;
 }
-.carousel-item-img-desktop{
+.carousel_item_img_desktop{
   width: 100%;
   height: 600px;
   background-size: auto;
   background-position: 50% top;
 }
-.carousel-item-img-mobile{
+.carousel_item_img_mobile{
   display: none;
 }
-.carousel-control{
+.carousel_control{
   display: none;
   padding: 15px 10px;
   background-color: rgba(0, 0, 0, 0.4);
@@ -72,61 +72,62 @@ body{
   color: #00aeff;
   transition: color .2s;
 }
-.carousel:hover .carousel-control{
+.carousel:hover .carousel_control{
   display: block;
   transition: .2s;
 }
-.carousel-control:hover{
+.carousel_control:hover{
   color: #91e4ff;
 }
-.carousel-control-prev{
+.carousel_control_prev{
   position: absolute;
   top: 50%;
   left: 100px;
   transform: translateY(-50%);
 }
-.carousel-control-next{
+.carousel_control_next{
   position: absolute;
   top: 50%;
   right: 100px;
   transform: translateY(-50%);
 }
-.carousel-item-content{
+.carousel_item_content{
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 100px;
+  bottom: 50px;
   user-select: none;
 }
-.content-inner{
+.content_inner{
   margin: 0 140px;
   box-sizing: border-box;
   padding: 0 40px;
   position: relative;
 }
-.carousel-item-logo{
+.carousel_item_logo{
   margin-bottom: 40px;
-  width: 270px;
+  height: 155px;
   position: relative;
 }
-.carousel-item-logo img{
-  width: 100%;
+.carousel_item_logo img{
+  height: 100%;
   user-select: none;
 }
-.carousel-item-desc{
+.carousel_item_desc{
   max-width: 700px;
+  height: 255px;
 }
-.carousel-item-title{
+.carousel_item_title{
   margin: 0;
   font-size: 70px;
   position: relative;
   user-select: none;
 }
-.carousel-item-title > a{
+.carousel_item_title > a{
   color: #fff;
   text-decoration: none;
 }
-.carousel-item-button{
+.carousel_item_button{
   margin-top: 20px;
   padding: 10px 50px;
   font-size: 18px;
@@ -140,30 +141,30 @@ body{
   user-select: none;
   transform: inherit;
 }
-.carousel-item-button:hover{
+.carousel_item_button:hover{
   background-color: #00aeff;
 }
 @media screen and (max-width: 1720px){
-  .carousel-control-prev{
+  .carousel_control_prev{
     left: 15px;
   }
-  .carousel-control-next{
+  .carousel_control_next{
     right: 15px;
   }
 }
 @media screen and (max-width: 1200px){
-  .carousel-item-logo{
-    width: 240px;
+  .carousel_item_logo{
+    height: 120px;
   }
-  .content-inner{
+  .content_inner{
     margin: 0 80px;
   }
-  .carousel-item-title{
+  .carousel_item_title{
     font-size: 60px;
   }
 }
 @media screen and (max-width: 992px){
-  .carousel-indicators > li{
+  .carousel_indicators > li{
     width: 60px;
   }
 }
@@ -171,90 +172,93 @@ body{
   .carousel{
     height: 450px;
   }
-  .carousel-item-img-desktop{
+  .carousel_item_img_desktop{
     display: none;
   }
-  .carousel-item-img-mobile{
+  .carousel_item_img_mobile{
     display: block;
     width: 100%;
     height: 450px;
     background-size: 768px auto;
     background-position: 50% 0px;
   }
-  .carousel-indicators{
+  .carousel_indicators{
     width: 100%;
     transform: translateX(0%);
   }
-  .carousel-indicators > li{
+  .carousel_indicators > li{
     padding-top: 15px;
     width: 16%;
   }
-  .carousel-index-border{
+  .carousel_index_border{
     height: 3px;
   }
-  .loading-bar{
+  .loading_bar{
     height: 3px;
   }
-  .carousel-item-content{
+  .carousel_item_content{
     padding: 0 20px;
     width: 100%;
     bottom: 40px;
     box-sizing: border-box;
   }
-  .carousel-item-desc{
+  .carousel_item_desc{
     text-align: center;
+    height: 200px;
   }
-  .carousel-item-logo{
+  .carousel_item_logo{
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 180px;
+    text-align: center;
   }
-  .content-inner{
+  .content_inner{
     margin: 0;
   }
-  .carousel-item-title{
+  .carousel_item_title{
     text-align: center;
-    font-size: 47px;
+    font-size: 43px;
   }
-  .carousel-item-button{
+  .carousel_item_button{
     margin-top: 30px;
     width: 200px;
   }
-  .carousel-control{
+  .carousel_control{
     display: block;
     padding: 10px 2px;
     font-size: 25px;
   }
-  .carousel-control-prev{
+  .carousel_control_prev{
     left: 0;
   }
-  .carousel-control-next{
+  .carousel_control_next{
     right: 0;
   }
 }
 @media screen and (max-width: 480px){
-  .carousel-item-img-mobile{
+  .carousel_item_img_mobile{
     background-size: cover;
     background-repeat: no-repeat;
   }
-  .carousel-item-title{
+  .carousel_item_content{
+    bottom: 60px;
+  }
+  .carousel_item_desc{
+    height: 150px;
+  }
+  .carousel_item_title{
     font-size: 25px;
   }
-  .carousel-item-button{
+  .carousel_item_button{
     width: 100%;
   }
-  .carousel-item-content{
-    bottom: 110px;
-  }
-  
 }
 
 .bgImgRight-fade-enter-active{
-  animation: background-right-in 5.5s ease-out;
+  animation: background_right_in 5.5s ease-out;
 }
 .bgImgLeft-fade-enter-active{
-  animation: background-left-in 5.5s ease-out;
+  animation: background_left_in 5.5s ease-out;
 }
 
 .logoRight-fade-enter{
@@ -304,7 +308,7 @@ body{
   opacity: 0;
 }
 
-@keyframes background-right-in{
+@keyframes background_right_in{
   0%{
     opacity: 0;
     background-position: 0% top;
@@ -318,7 +322,7 @@ body{
     background-position: 50% top;
   }
 }
-@keyframes background-left-in{
+@keyframes background_left_in{
   0%{
     opacity: 0;
     background-position: 100% top;
@@ -332,7 +336,7 @@ body{
     background-position: 50% top;
   }
 }
-@keyframes border-loading{
+@keyframes border_loading{
   0%{
     width: 0%;
     background-color: #00aeff;
