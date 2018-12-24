@@ -11,43 +11,43 @@
   <body>
     <div id="app">
       <div class="carousel" @touchstart="swipeStart" @touchend="swipeEnd" @mousedown="swipeStart" @mouseup="swipeEnd">
-        <div class="carousel-items">
-          <div class="carousel-item">
+        <div class="carousel_items">
+          <div class="carousel_item">
             <transition :name="bgImgFade">
-              <div class="carousel-item-img-desktop" :style="{ backgroundImage: `url('${itemHandler.desktopImg}')` }" v-if="show"></div>
+              <div class="carousel_item_img_desktop" :style="{ backgroundImage: `url('${itemHandler.desktopImg}')` }" v-if="show"></div>
             </transition>
             <transition :name="bgImgFade">
-              <div class="carousel-item-img-mobile background-left-enter" :style="
+              <div class="carousel_item_img_mobile background_left_enter" :style="
               { backgroundImage: `url('${itemHandler.mobileImg}')` }" v-if="show"></div>
             </transition>
-            <div class="carousel-item-content">
-              <div class="content-inner" :style="
+            <div class="carousel_item_content">
+              <div class="content_inner" :style="
               { top: `${moveY}px` }">
                 <transition :name="logoFade">
-                  <div class="carousel-item-logo" v-if="show">
+                  <div class="carousel_item_logo" v-if="show">
                     <a :href="itemHandler.url"><img :src="itemHandler.logo" :style="
                       { opacity: `${1-moveY*0.02}` }"></a>
                   </div>
                 </transition>
-                <div class="carousel-item-desc">
+                <div class="carousel_item_desc">
                   <transition :name="titleFade">
-                    <h1 class="carousel-item-title" v-if="show"><a :href="itemHandler.url">{{ itemHandler.title }}</a></h1>
+                    <h1 class="carousel_item_title" v-if="show"><a :href="itemHandler.url">{{ itemHandler.title }}</a></h1>
                   </transition>    
                   <transition :name="buttonFade">
-                    <a :href="itemHandler.url" v-if="show"><button class="carousel-item-button">{{ itemHandler.button }}</button></a>
+                    <a :href="itemHandler.url" v-if="show"><button class="carousel_item_button">{{ itemHandler.button }}</button></a>
                   </transition>
                 </div>
               </div>
             </div>
           </div>
-        <a class="carousel-control carousel-control-prev" href="" @click.prevent="prevNextHandler(-1)"><i class="fas fa-angle-left"></i></a>
-        <a class="carousel-control carousel-control-next" href="" @click.prevent="prevNextHandler(1)"><i class="fas fa-angle-right"></i></a>
+        <a class="carousel_control carousel_control_prev" href="" @click.prevent="prevNextHandler(-1)"><i class="fas fa-angle-left"></i></a>
+        <a class="carousel_control carousel_control_next" href="" @click.prevent="prevNextHandler(1)"><i class="fas fa-angle-right"></i></a>
         </div>
       </div>
-      <ul class="carousel-indicators">
+      <ul class="carousel_indicators">
         <li v-for="(tab, i) in carouselItems" :key="i" @click="tabHandler(i)">
-          <div class="carousel-index-border" :class="{ 'border-active': i === index }">
-            <div class="loading-bar" v-show="i === index && !clicked"></div>
+          <div class="carousel_index_border" :class="{ 'border_active': i === index }">
+            <div class="loading_bar" v-show="i === index && !clicked"></div>
           </div>
         </li>
       </ul>
